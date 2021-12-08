@@ -3,7 +3,7 @@ import itertools
 
 index2segment = 'abcdefg'  # 0 -> 'a'
 segment2index = {c: i for i, c in enumerate('abcdefg')}  # 'a' -> 0
-digits = [frozenset(d.replace('-', '')) for d in[
+digits = [frozenset(d.replace('-', '')) for d in [
     'abc-efg',  # 0
     '--c--f-',  # 1
     'a-cde-g',  # 2
@@ -39,6 +39,7 @@ def parse_line(line):
     notes_, display_ = line.split('|')
     notes, display = notes_.split(), display_.split()
     return notes, display
+
 
 input_ = open('08-2-input.txt').readlines()
 total = 0
